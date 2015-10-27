@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller
 {
+        public $layout = '//layouts/login_main';
 	public function actionLogin()
 	{
 		$model=new LoginForm;

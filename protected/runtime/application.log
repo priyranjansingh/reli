@@ -478,3 +478,744 @@ Stack trace:
 REQUEST_URI=/reli/index.php/site/login
 HTTP_REFERER=http://localhost/reli/index.php/admin/plans/view?id=a23543c3-000c-346b-801d-562df21c296f
 ---
+2015/10/26 17:56:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'insurance'' in C:\xampp\htdocs\reli\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\reli\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\reli\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(1433): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(1522): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\reli\protected\modules\user\components\UserIdentity.php(27): CActiveRecord->findByAttributes(Array)
+#8 C:\xampp\htdocs\reli\protected\modules\user\models\LoginForm.php(52): UserIdentity->authenticate()
+#9 C:\xampp\htdocs\reli\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 C:\xampp\htdocs\reli\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 C:\xampp\htdocs\reli\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 C:\xampp\htdocs\reli\protected\modules\user\controllers\DefaultController.php(21): CModel->validate()
+#13 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogin()
+#14 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/lo...')
+#19 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/reli/index.php/user/login
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/logo1.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/js...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/js/jquery.js
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/js...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/js/jquery.query-2.1.7.js
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/js...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/js/rainbows.js
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/cs...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/css/style.css
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/submit_hover.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/logo1.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/mailicon.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/passicon.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/submit_hover.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_left.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_left.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/BG.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/BG.jpg
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_top.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_top.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_middle.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_middle.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_bottom.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_bottom.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_middle.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_middle.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_right.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_right.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/BG.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/BG.jpg
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_left.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_left.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_middle.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_middle.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_middle.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_middle.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_top.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_top.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/wrapper_bottom.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/wrapper_bottom.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/img/input_right.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/img/input_right.png
+HTTP_REFERER=http://localhost/reli/themes/religare/css/style.css
+---
+2015/10/27 03:21:39 [error] [php] include(Menus.php): failed to open stream: No such file or directory (C:\xampp\htdocs\reli\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php(55): require_once()
+#2 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#5 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 C:\xampp\htdocs\reli\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 C:\xampp\htdocs\reli\framework\web\CBaseController.php(214): CContentDecorator->run()
+#8 C:\xampp\htdocs\reli\framework\web\CBaseController.php(308): SiteController->endWidget()
+#9 C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php(4): SiteController->endContent()
+#10 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#12 C:\xampp\htdocs\reli\framework\web\CController.php(784): SiteController->renderFile()
+#13 C:\xampp\htdocs\reli\protected\controllers\SiteController.php(32): SiteController->render()
+#14 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\xampp\htdocs\reli\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\reli\index.php(13): CWebApplication->run()
+REQUEST_URI=/reli/
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php (3)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php (55)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php (4)
+2015/10/27 03:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/control.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/control.js
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/27 03:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/jquery-ui.min.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/27 03:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-3.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-3.jpg
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/27 03:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-1.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-1.jpg
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/27 03:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/favicon.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/favicon.png
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/27 03:22:41 [error] [php] include(Menus.php): failed to open stream: No such file or directory (C:\xampp\htdocs\reli\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php(55): require_once()
+#2 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#5 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 C:\xampp\htdocs\reli\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 C:\xampp\htdocs\reli\framework\web\CBaseController.php(214): CContentDecorator->run()
+#8 C:\xampp\htdocs\reli\framework\web\CBaseController.php(308): SiteController->endWidget()
+#9 C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php(4): SiteController->endContent()
+#10 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#12 C:\xampp\htdocs\reli\framework\web\CController.php(784): SiteController->renderFile()
+#13 C:\xampp\htdocs\reli\protected\controllers\SiteController.php(32): SiteController->render()
+#14 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\xampp\htdocs\reli\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\reli\index.php(13): CWebApplication->run()
+REQUEST_URI=/reli/index.php
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php (3)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php (55)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php (4)
+2015/10/27 03:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/jquery-ui.min.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/reli/index.php
+---
+2015/10/27 03:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/control.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/control.js
+HTTP_REFERER=http://localhost/reli/index.php
+---
+2015/10/27 03:22:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-1.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-1.jpg
+HTTP_REFERER=http://localhost/reli/index.php
+---
+2015/10/27 03:22:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-3.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-3.jpg
+HTTP_REFERER=http://localhost/reli/index.php
+---
+2015/10/27 03:53:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'insurance'' in C:\xampp\htdocs\reli\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\reli\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\reli\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(1433): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\reli\framework\db\ar\CActiveRecord.php(1522): CActiveRecord->getTableAlias(true)
+#7 C:\xampp\htdocs\reli\protected\modules\user\components\UserIdentity.php(27): CActiveRecord->findByAttributes(Array)
+#8 C:\xampp\htdocs\reli\protected\modules\user\models\LoginForm.php(52): UserIdentity->authenticate()
+#9 C:\xampp\htdocs\reli\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 C:\xampp\htdocs\reli\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 C:\xampp\htdocs\reli\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 C:\xampp\htdocs\reli\protected\modules\user\controllers\DefaultController.php(22): CModel->validate()
+#13 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): DefaultController->actionLogin()
+#14 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('login')
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/lo...')
+#19 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/reli/index.php/user/login
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:00:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/im...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/img/mailicon.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:10:23 [error] [php] include(Menus.php): failed to open stream: No such file or directory (C:\xampp\htdocs\reli\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php(55): require_once()
+#2 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#4 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(76): DefaultController->renderFile()
+#5 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 C:\xampp\htdocs\reli\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 C:\xampp\htdocs\reli\framework\web\CBaseController.php(214): CContentDecorator->run()
+#8 C:\xampp\htdocs\reli\framework\web\CBaseController.php(308): DefaultController->endWidget()
+#9 C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php(4): DefaultController->endContent()
+#10 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#12 C:\xampp\htdocs\reli\framework\web\CController.php(784): DefaultController->renderFile()
+#13 C:\xampp\htdocs\reli\protected\modules\dashboard\controllers\DefaultController.php(7): DefaultController->render()
+#14 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(286): DefaultController->runAction()
+#17 C:\xampp\htdocs\reli\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): DefaultController->run()
+#19 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\reli\index.php(13): CWebApplication->run()
+REQUEST_URI=/reli/dashboard
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php (3)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php (55)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php (4)
+2015/10/27 04:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/jquery-ui.min.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/control.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/control.js
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-1.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-1.jpg
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-3.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-3.jpg
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/favicon.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/favicon.png
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:12:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:12:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religareimg/submit.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religareimg/submit.png
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/27 04:15:57 [error] [php] include(Menus.php): failed to open stream: No such file or directory (C:\xampp\htdocs\reli\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php(55): require_once()
+#2 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#4 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(76): DefaultController->renderFile()
+#5 C:\xampp\htdocs\reli\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 C:\xampp\htdocs\reli\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 C:\xampp\htdocs\reli\framework\web\CBaseController.php(214): CContentDecorator->run()
+#8 C:\xampp\htdocs\reli\framework\web\CBaseController.php(308): DefaultController->endWidget()
+#9 C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php(4): DefaultController->endContent()
+#10 C:\xampp\htdocs\reli\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\reli\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#12 C:\xampp\htdocs\reli\framework\web\CController.php(784): DefaultController->renderFile()
+#13 C:\xampp\htdocs\reli\protected\modules\dashboard\controllers\DefaultController.php(7): DefaultController->render()
+#14 C:\xampp\htdocs\reli\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#15 C:\xampp\htdocs\reli\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\reli\framework\web\CController.php(286): DefaultController->runAction()
+#17 C:\xampp\htdocs\reli\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#18 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): DefaultController->run()
+#19 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\reli\index.php(13): CWebApplication->run()
+REQUEST_URI=/reli/dashboard
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\navigation.php (3)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\main.php (55)
+in C:\xampp\htdocs\reli\themes\religare\views\layouts\column1.php (4)
+2015/10/27 04:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/jquery-ui.min.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/jquery-ui.min.js
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/js/control.js".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/js/control.js
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-3.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-3.jpg
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/prv/estate/estate-slider-bg-1.jpg".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/prv/estate/estate-slider-bg-1.jpg
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/27 04:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/images/favicon.png".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/images/favicon.png
+HTTP_REFERER=http://localhost/reli/dashboard
+---
