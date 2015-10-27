@@ -3,6 +3,7 @@
 class DefaultController extends Controller
 {
         public $layout = '//layouts/login_main';
+        public $defaultAcion = "login";
 //	public function actionLogin()
 //	{
 //		$model=new LoginForm;
@@ -26,7 +27,7 @@ class DefaultController extends Controller
 //		$this->render('index',array('model'=>$model));
 //	}
         
-        public function actionIndex()
+	public function actionLogin()
 	{
 		$model=new LoginForm;
 

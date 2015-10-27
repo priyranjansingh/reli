@@ -8,16 +8,6 @@
     $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
 });
 
-/*========tooltip and popovers====*/
-$(document).ready(function () {
-$("[data-toggle=popover]").popover();
-
-$("[data-toggle=tooltip]").tooltip();
-});
-
-
-
-
 //transparent header
 
 $(document).ready(function () {
@@ -61,6 +51,7 @@ $(document).ready(function () {
         }
     });
     
+<<<<<<< HEAD
 $(document).ready(function () {
     $range = $("#range");
     $range.ionRangeSlider({
