@@ -60,3 +60,10 @@ function pre($val, $exit = false) {
     if ($exit)
         exit();
 }
+
+function rand_uniqid()
+{
+    $prefix = time();
+    $uniqid = uniqid($prefix);
+    return $uniqid;
+}

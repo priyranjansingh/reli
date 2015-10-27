@@ -62,8 +62,8 @@ class PlansController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Plans;
-
+		$model = new Plans;
+		$region = PlanRegion::model()->findAll();
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -83,6 +83,7 @@ class PlansController extends Controller
 					$planPrice->policy_tenure = $plan_price['policy_tenure'][$i];
 					$planPrice->policy_amount = $plan_price['policy_amount'][$i];
 					$planPrice->premium = $plan_price['policy_premium'][$i];
+					$planPrice->region = $plan_price['region'][$i];
 					$planPrice->save();
 				}
 				for($j = 0; $j < count($plan_adv['advantage']); $j++){
@@ -98,6 +99,7 @@ class PlansController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+			'region'=>$region
 		));
 	}
 

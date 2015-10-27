@@ -10,6 +10,8 @@
  * @property string $policy_number
  * @property integer $mobile
  * @property string $email
+ * @property string $policy_amount
+ * @property string $policy_premium
  * @property string $amount_paid
  * @property string $is_purchased
  * @property string $policy_purchase_date
@@ -39,17 +41,17 @@ class Policy extends BaseModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, plan, proposal_no, mobile, email, date_entered, date_modified, created_by, modified_by', 'required'),
+			array('id, plan, proposal_no, mobile, email, policy_amount, policy_premium, date_entered, date_modified, created_by, modified_by', 'required'),
 			array('mobile, status, deleted', 'numerical', 'integerOnly'=>true),
 			array('id, plan, created_by, modified_by', 'length', 'max'=>36),
 			array('proposal_no', 'length', 'max'=>16),
-			array('policy_number', 'length', 'max'=>64),
+			array('policy_number, policy_amount, policy_premium', 'length', 'max'=>64),
 			array('email, amount_paid', 'length', 'max'=>255),
 			array('is_purchased', 'length', 'max'=>1),
 			array('policy_purchase_date, policy_start_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, plan, proposal_no, policy_number, mobile, email, amount_paid, is_purchased, policy_purchase_date, policy_start_date, date_entered, date_modified, created_by, modified_by, status, deleted', 'safe', 'on'=>'search'),
+			array('id, plan, proposal_no, policy_number, mobile, email, policy_amount, policy_premium, amount_paid, is_purchased, policy_purchase_date, policy_start_date, date_entered, date_modified, created_by, modified_by, status, deleted', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,6 +78,8 @@ class Policy extends BaseModel
 			'policy_number' => 'Policy Number',
 			'mobile' => 'Mobile',
 			'email' => 'Email',
+			'policy_amount' => 'Policy Amount',
+			'policy_premium' => 'Policy Premium',
 			'amount_paid' => 'Amount Paid',
 			'is_purchased' => 'Is Purchased',
 			'policy_purchase_date' => 'Policy Purchase Date',
@@ -113,6 +117,8 @@ class Policy extends BaseModel
 		$criteria->compare('policy_number',$this->policy_number,true);
 		$criteria->compare('mobile',$this->mobile);
 		$criteria->compare('email',$this->email,true);
+		$criteria->compare('policy_amount',$this->policy_amount,true);
+		$criteria->compare('policy_premium',$this->policy_premium,true);
 		$criteria->compare('amount_paid',$this->amount_paid,true);
 		$criteria->compare('is_purchased',$this->is_purchased,true);
 		$criteria->compare('policy_purchase_date',$this->policy_purchase_date,true);

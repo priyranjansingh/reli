@@ -3,51 +3,54 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
+$this->pageTitle = Yii::app()->name . ' - Login';
+$this->breadcrumbs = array(
+    'Login',
 );
 ?>
+<h2>Login</h2>
+<?php
+$baseUrl = Yii::app()->theme->baseUrl;
+?>
 
-<h1>Login</h1>
+<?php
+$form = $this->beginWidget('CActiveForm', array(
+    'id' => 'login-form',
+    'enableClientValidation' => true,
+    'clientOptions' => array(
+        'validateOnSubmit' => true,
+    ),
+        ));
+?>
 
-<p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+<div id="username_input">
+    <div id="username_inputleft"></div>
+    <div id="username_inputmiddle">
+        <?php echo $form->textField($model, 'username', array("id" => "url")); ?>
+        <img id="url_user" src="<?php echo $baseUrl; ?>/img/mailicon.png" alt="">
+        <?php echo $form->error($model, 'username'); ?>
+    </div>   
+    <div id="username_inputright"></div>
+</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
+<div id="password_input">
+    <div id="password_inputleft"></div>
+    <div id="password_inputmiddle">
+        <?php echo $form->passwordField($model, 'password', array("id" => "url")); ?>
+        <img id="url_password" src="<?php echo $baseUrl; ?>/img/passicon.png" alt="">
+        <?php echo $form->error($model, 'password'); ?>
+    </div>
+    <div id="password_inputright"></div>
+</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
+<div id="submit">
+    <input type="image" src="<?php echo $baseUrl; ?>/img/submit_hover.png" id="submit1" value="Sign In">
+    <input type="image" src="<?php echo $baseUrl; ?>/img/submit.png" id="submit2" value="Sign In">
+</div>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+

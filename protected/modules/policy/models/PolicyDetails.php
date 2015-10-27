@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'policy_details':
  * @property string $id
- * @property string $quotation
+ * @property string $policy
  * @property integer $is_proposer
  * @property string $first_name
  * @property string $last_name
@@ -44,16 +44,16 @@ class PolicyDetails extends BaseModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, quotation, first_name, last_name, dob, title, date_entered, date_modified, created_by, modified_by', 'required'),
+			array('id, policy, first_name, last_name, dob, title, date_entered, date_modified, created_by, modified_by', 'required'),
 			array('is_proposer, pin_code, status, deleted', 'numerical', 'integerOnly'=>true),
-			array('id, quotation, created_by, modified_by', 'length', 'max'=>36),
+			array('id, policy, created_by, modified_by', 'length', 'max'=>36),
 			array('first_name, last_name, city, state', 'length', 'max'=>64),
 			array('title', 'length', 'max'=>4),
 			array('nominee_name, email, address_line_1, address_line_2', 'length', 'max'=>255),
 			array('mobile', 'length', 'max'=>16),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, quotation, is_proposer, first_name, last_name, dob, title, nominee_name, email, mobile, address_line_1, address_line_2, city, state, pin_code, date_entered, date_modified, created_by, modified_by, status, deleted', 'safe', 'on'=>'search'),
+			array('id, policy, is_proposer, first_name, last_name, dob, title, nominee_name, email, mobile, address_line_1, address_line_2, city, state, pin_code, date_entered, date_modified, created_by, modified_by, status, deleted', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,7 +75,7 @@ class PolicyDetails extends BaseModel
 	{
 		return array(
 			'id' => 'ID',
-			'quotation' => 'Quotation',
+			'policy' => 'Policy',
 			'is_proposer' => 'Is Proposer',
 			'first_name' => 'First Name',
 			'last_name' => 'Last Name',
@@ -117,7 +117,7 @@ class PolicyDetails extends BaseModel
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('quotation',$this->quotation,true);
+		$criteria->compare('policy',$this->policy,true);
 		$criteria->compare('is_proposer',$this->is_proposer);
 		$criteria->compare('first_name',$this->first_name,true);
 		$criteria->compare('last_name',$this->last_name,true);

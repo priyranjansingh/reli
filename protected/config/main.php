@@ -8,9 +8,11 @@ require_once( dirname(__FILE__) . '/../components/helpers.php');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Religare Insurance',
+        'defaultController' => 'user',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+        'theme' => 'religare',
 
 	// autoloading model and component classes
 	'import'=>array(

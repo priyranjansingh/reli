@@ -30,26 +30,35 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 	<div id="copy_price">
-	<div class="row price">
-		<div class="span3">
+	<div class="row price" style="width:100%;float:left;">
+		<div class="span6">
 			<label for="Plan_Price_age_group" class="required">Age Group <span class="required">*</span></label>
 			<input size="36" maxlength="36" name="PlanPrice[age_group][]" id="Plan_Price_age_group" type="text">
 		</div>
-		<div class="span3">
+		<div class="span6">
 			<label for="Plan_Price_policy_tenure" class="required">Policy Tenure <span class="required">*</span></label>
 			<input size="36" maxlength="36" name="PlanPrice[policy_tenure][]" id="Plan_Price_policy_tenure" type="text">
 		</div>
-		<div class="span3">
+		<div class="span6">
 			<label for="Plan_Price_policy_amount" class="required">Policy Amount <span class="required">*</span></label>
 			<input size="36" maxlength="36" name="PlanPrice[policy_amount][]" id="Plan_Price_policy_amount" type="text">
 		</div>
-		<div class="span3">
+		<div class="span6">
 			<label for="Plan_Price_policy_premium" class="required">Policy Premium <span class="required">*</span></label>
 			<input size="36" maxlength="36" name="PlanPrice[policy_premium][]" id="Plan_Price_policy_premium" type="text">
 		</div>
+		<div class="span6">
+			<label for="Plan_Price_region" class="required">Region <span class="required">*</span></label>
+			<select name="PlanPrice[region][]" id="Plan_Price_region">
+				<?php foreach($region as $r): ?>
+					<option value="<?php echo $r->id; ?>"><?php echo $r->region; ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
 	</div>
 	</div>
-	<div id="copy_advantage">
+
+	<div id="copy_advantage" style="width:100%;float:left;">
 	<div class="row advantage">
 		<div class="span6">
 			<label for="Plan_Advantage_advantage" class="required">Advantage <span class="required">*</span></label>
@@ -61,7 +70,7 @@
 		</div>
 	</div>
 	</div>
-	<div class="row buttons">
+	<div class="row buttons" style="width:100%;float:left;">
 		<a href="javascript:void(0);" id="add_price">Add Price</a>
 		<a href="javascript:void(0);" id="add_adv">Add Advantage</a>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
