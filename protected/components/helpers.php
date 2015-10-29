@@ -67,3 +67,23 @@ function rand_uniqid()
     $uniqid = uniqid($prefix);
     return $uniqid;
 }
+
+function mailsend($to, $from, $subject, $message) {
+    $mail = Yii::app()->Smtpmail;
+    $mail->IsSMTP(); // enable SMTP
+    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPAuth = true; // authentication enabled
+    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+    $mail->IsHTML(true);
+    $mail->SetFrom($from);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->AddAddress($to);
+    $mail->AddAttachment('./assets/pdf/abc.pdf');
+    if (!$mail->Send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        echo "Message has been sent";
+    }
+    //return $mail->Send();
+}

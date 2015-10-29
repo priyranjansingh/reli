@@ -1,0 +1,56 @@
+2015/10/28 18:44:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/
+---
+2015/10/28 18:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/pe-icons/Pe-icon-7-stroke.css".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/pe-icons/Pe-icon-7-stroke.css
+HTTP_REFERER=http://localhost/reli/
+---
+2015/10/29 01:49:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\reli\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('user/default/lo...')
+#3 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/reli/index.php/user/login
+---
+2015/10/29 01:49:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/pe-icons/Pe-icon-7-stroke.css".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/pe-icons/Pe-icon-7-stroke.css
+HTTP_REFERER=http://localhost/reli/index.php/user/login
+---
+2015/10/29 01:49:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/pe-icons/Pe-icon-7-stroke.css".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/pe-icons/Pe-icon-7-stroke.css
+HTTP_REFERER=http://localhost/reli/dashboard
+---
+2015/10/29 01:55:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/default/religare/pe-icons/Pe-icon-7-stroke.css".' in C:\xampp\htdocs\reli\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\reli\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/default/...')
+#1 C:\xampp\htdocs\reli\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reli\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reli/themes/religare/pe-icons/Pe-icon-7-stroke.css
+HTTP_REFERER=http://localhost/reli/policy/quotation
+---
