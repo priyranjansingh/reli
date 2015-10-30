@@ -68,7 +68,7 @@ function rand_uniqid()
     return $uniqid;
 }
 
-function mailsend($to, $from, $subject, $message) {
+function mailsend($to, $from, $subject, $message,$attachment='') {
     $mail = Yii::app()->Smtpmail;
     $mail->IsSMTP(); // enable SMTP
     $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -79,7 +79,10 @@ function mailsend($to, $from, $subject, $message) {
     $mail->Subject = $subject;
     $mail->Body = $message;
     $mail->AddAddress($to);
-    $mail->AddAttachment('./assets/pdf/abc.pdf');
+    if(!empty($attachment))
+    {    
+        $mail->AddAttachment($attachment);
+    }
     if (!$mail->Send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
     } else {

@@ -19,7 +19,7 @@ class DefaultController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('quotation','purchase','process','success','detail'),
+				'actions'=>array('quotation','purchase','process','success','detail','send'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -111,4 +111,18 @@ class DefaultController extends Controller
 		echo json_encode($result);
 
 	}
+        
+        // function for handling the quote email
+        
+        public function actionSend()
+        {
+             $plan_id = "880dcb73-7bc2-11e5-bc4d-3c07717072c4";
+             $plan_model = Plans::model()->find(array('condition' => 'id = "' . $plan_id . '" '));
+             $data['plan_name'] = $plan_model->name;
+             $body = $this->renderPartial("quotation_mail_template",$data,true);
+             mailsend("singh.priyranjan@gmail.com", "priyranjan@clematistech.com", "hi", $body);
+        }        
+        
+        
+        
 }

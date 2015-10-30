@@ -27,7 +27,7 @@ class DefaultController extends Controller {
 
     public function actionPdf() {
         
-        mailsend("singh.priyranjan@gmail.com", "priyranjan@clematistech.com", "hi", "hello");
+        mailsend("singh.priyranjan@gmail.com", "priyranjan@clematistech.com", "hi", "hello","./assets/pdf/abc.pdf");
          //$mPDF1 = Yii::app()->ePdf->mpdf();
          //$mPDF1->WriteHTML($this->render('mail', array(), true));
          //$mPDF1->Output("./assets/pdf/abc.pdf","F");
